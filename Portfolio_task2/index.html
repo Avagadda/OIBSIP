@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/afd8f1e3ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo1.jpg" class="logo1">
+            <ul id="sidemenu">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#portfolio">CERTIFICATIONS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <i class="fa-sharp fa-light fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-thin fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Frontend Developer and Programmer</p>
+            <h1>Hi! I'm <span>Avani</span></h1>
+        </div>
+    </div>
+</div>
+<!-- ----about---- -->
+<div id="ABOUT">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/img-removebg-preview.jpg">
+            </div>
+            <div class="about-col-1">
+                <h1 class="sub-title">About me</h1>
+                <p>Hello everyone, I am Avagadda Avani a final year Cse student from Gvp college of engineering</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Frontend Development</span><br>Web app Development</li>
+                        <li><span>Python</span><br>Programming</li>
+                        <li><span>Figma</span><br>Design Web/App Interface</li>
+                        
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>Btech Cse from Gvp College</li>
+                        <li><span>2020</span><br>Intermediate from FIITJEE junior college</li>
+                        <li><span>2018</span><br>Tenth from St.Anns School</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- ----projects----- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Landing Page</h2>
+                <p>A frontend project based on Html,Css and Javascript,where it helps us to view books online.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-invision"></i>
+                <h2>Hotel Management</h2>
+                <p> I have tried to computerize the hotel management system through my project.
+                    The project is written in Python 3 that uses OOPS concept , it is based on object and classes.
+                    For The GUI I Have Used TKINTER And PAGE.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <h2>Guess the state</h2>
+                <p>A memory game developed using python.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Certifications</h1>
+        <div class="cert-list">
+            <div class="cert">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>AWS Certifications</h3>
+                    <a href="#"><i class="fa-sharp fa-regular fa-file-certificate"></i></a>
+                </div>
+            </div>
+            <div class="cert">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Udemy Certification</h3>
+                    <a href="#"><i class="fa-sharp fa-regular fa-file-certificate"></i></a>
+                </div>
+            </div>
+            <div class="cert">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>CISCO Certifications</h3>
+                    <a href="#"><i class="fa-sharp fa-regular fa-file-certificate"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+                <p><i class="fa-regular fa-phone-plus"></i> 123945670</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright @Avani.</p>
+    </div>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
+</body>
+</html>
